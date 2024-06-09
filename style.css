@@ -369,6 +369,13 @@ article .icon {
   height: 90%;
 }
 
+.project-img.eatsafe {
+  max-width: 300px;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+}
+
 .project-title {
   margin: 1rem;
   color: black;
@@ -386,17 +393,18 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  padding: 2rem;
 }
 
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; 
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: 0.1rem solid rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .contact-info-container {
@@ -405,6 +413,7 @@ article .icon {
   justify-content: center;
   gap: 0.5rem;
   margin: 1rem;
+  max-width: 300px;
 }
 
 .contact-info-container p {
@@ -428,4 +437,52 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* CAROUSEL */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto; /* Ensure images scale properly */
+  display: block;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
 }
